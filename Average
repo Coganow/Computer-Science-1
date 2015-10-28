@@ -1,0 +1,13 @@
+RacingTurtle aTurtle1 = new RacingTurtle(25, "Tobuscus");
+		aTurtle1.forward(100);
+
+		RacingTurtle aTurtle2 = new RacingTurtle(25, "Dunkey");
+		aTurtle2.forward(25);
+
+		RaceController aController = new RaceController();
+		aController.addRaceParticipant(aTurtle1);
+		aController.addRaceParticipant(aTurtle2);
+
+		double AverageTurtle = aController.getAverageDistanceMoved();
+		assertEquals(62.5, AverageTurtle, 0.001);
+	}
